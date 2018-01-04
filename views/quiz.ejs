@@ -1,0 +1,22 @@
+<h1>Kontrolní test z HTML a CSS</h1>
+<form method="POST" action="/quiz/check">
+    <% questions.forEach(function(question) { %>
+        <h4><%= question.title %></h4>
+        <label class="checkBox"><%= question.a %>
+            <input type="radio" name="<%= question.number %>" value="a" required="required" <% if(answers[question.number] == 'a') { %>checked="checked"<% } %> />
+            <span class="checkMark"></span>
+        </label>
+        <label class="checkBox"><%= question.b %>
+            <input type="radio" name="<%= question.number %>" value="b" required="required" <% if(answers[question.number] == 'b') { %>checked="checked"<% } %> />
+            <span class="checkMark"></span>
+        </label>
+        <label class="checkBox"><%= question.c %>
+            <input type="radio" name="<%= question.number %>" value="c" required="required" <% if(answers[question.number] == 'c') { %>checked="checked"<% } %> />
+            <span class="checkMark"></span>
+        </label>
+    <% }) %>
+    <div class="formButtons">
+        <input type="submit" value="Vyhodnotit" />
+        <input type="button" id="newQuestionsBtn" value="Nové otázky" onclick="location.replace('/quiz/new');" />
+    </div>
+</form>

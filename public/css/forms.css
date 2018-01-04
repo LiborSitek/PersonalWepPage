@@ -1,0 +1,212 @@
+.noIndent {
+    text-align:left;
+    text-indent:0px;
+}
+.formCover [type=text], .formCover [type=number], .formCover [type=password], .formCover [type=email], .formCover textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+#morseCode, #alfaCode {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    background-color:white;
+    height:200px;
+}
+#zprava, #vzkaz {
+    height:200px;
+}
+input[type=submit], input[type=button] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover, input[type=button]:hover {
+    background-color: #45a049;
+    box-shadow:0 0 8px grey;
+}
+.formCover {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top:20px;
+}
+.center {
+    text-align:center;
+}
+
+/* Login a Registrace */
+.formButtons {
+    text-align: center;
+    margin-top: 25px;
+}
+#registerBtn, #cancelBtn, #odhlasBtn, #newQuestionsBtn {
+    float: right;
+    background-color: tomato;
+}
+#registerBtn:hover, #cancelBtn:hover, #odhlasBtn:hover, #newQuestionsBtn:hover {
+    background-color: #ff3300;
+    box-shadow:0 0 8px grey;
+}
+#registerForm h2 {
+    text-align: center;
+    padding-top: 20px;
+}
+#closeBtnReg {
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 0;
+}
+#closeBtnReg:hover {
+    color: tomato;
+    cursor: pointer;
+}
+#registerFormCover {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+#registerForm, #loginForm {
+    max-width: 500px;
+    margin: 0 auto;
+}
+#registerFormCover .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Vzkazník */
+.vzkazy {
+    border-radius: 10px;
+    padding:10px;
+    margin:10px 0;
+    background-color:burlywood;
+}
+.vzkazy:nth-child(even) {
+    background-color:darkkhaki;
+}
+.vzkazy span {
+    float:left;
+    font-weight:bold;
+    font-style:italic;
+}
+.vzkazy div:first-of-type {
+    text-align:right;
+}
+.vzkazy div:last-child {
+    padding:10px;
+}
+#sipkyVzkaznik {
+    text-align: center;
+}
+#sipkyVzkaznik i:not(.disabled) {
+    font-size: 60px;
+    color: #333;
+    vertical-align: middle;
+}
+#sipkyVzkaznik i:hover:not(.disabled) {
+    color: orange;
+}
+#sipkyVzkaznik a {
+    margin: 25px;
+}
+i.disabled {
+    font-size: 60px;
+    color: #f2f2f2;
+    margin: 0 25px;
+    vertical-align: middle;
+}
+
+/* Nastavení stránky */
+select {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+option:hover:not([selected]) {
+    background-color: #ddd;
+}
+
+/* ChechBox and Radio Buttons */
+.checkBox {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin: 8px 5px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.checkBox input {
+    position: absolute;
+    opacity: 0;
+}
+.checkMark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+.checkBox:hover input ~ .checkMark {
+    background-color: #ccc;
+}
+.checkBox input:checked ~ .checkMark {
+    background-color: #2196F3;
+}
+.checkMark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkBox input:checked ~ .checkMark:after {
+    display: block;
+}
+.checkBox .checkMark:after {
+    left: 6px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+h4 {
+    padding: 40px 0 10px 0;
+    font-style: italic;
+}

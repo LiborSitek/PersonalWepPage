@@ -1,0 +1,21 @@
+<h1>Návštěvní kniha</h1>
+<p class="noIndent">Pokud zde chcete zanechat vzkaz, který uvidí i ostatní, můžete tak učinit zde:</p>
+<div class="formCover">
+    <form method="POST" action="/guestbook">
+        <label for="jmeno">Vaše jméno:</label>
+        <input type="text" name="name" id="jmeno" required="required" placeholder="Vaše jméno..." value="<%= msg_name %>" />
+        <label for="antispam">Antispam:</label>
+        <input type="text" name="antispam" id="antispam" required="required" placeholder="Zde zadejte aktuální den v týdnu..." />
+        <label for="vzkaz">Váš vzkaz:</label>
+        <textarea name="content" id="vzkaz" placeholder="Zde napište Váš vzkaz..."><%= msg_content %></textarea>
+        <div class="center"><input type="submit" value="Uložit vzkaz" /></div>
+    </form>
+</div>
+<h3 id="kotvaVzkazy">Vaše vzkazy:</h3>
+<% messags.forEach(function(messag) { %>
+    <div class="vzkazy">
+        <span><%= messag.name %></span>
+    <div><%= messag.date.getPrettyDate() %></div>
+    <div><%= messag.content %></div>  
+    </div>
+<% }) %>

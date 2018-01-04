@@ -1,0 +1,15 @@
+<h1>Fotogalerie</h1>
+<div id="fotogalerie">
+<% for (let photo of photos) { %>
+    <div class="foto" data-poradi="<%= ++list %>" style="background-image: url('/foto/<%= photo %>')" title="<%= photo.replace('_', ' ').replace('.JPG', '') %>">
+        <img src="/foto/<%= photo %>" alt="<%= photo.replace('_', ' ').replace('.JPG', '') %>" />
+    </div>
+<% } %>
+</div>
+<div id="modal">
+    <span class="modalBtn" id="closeBtn">&times;</span>
+    <span class="modalBtn" id="prevBtn">&#10094;</span>
+    <span class="modalBtn" id="nextBtn">&#10095;</span>
+    <div id="fotoModal"></div>
+</div>
+<script src="/js/galerie.js"></script>

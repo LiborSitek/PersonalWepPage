@@ -1,0 +1,27 @@
+<h1>Přihlašovací formulář</h1>
+<form method="POST" action="/login/login">
+    <div class="formCover" id="loginForm">
+        <label for="jmenoLog">Uživatelské jméno:</label>
+        <input type="text" name="name" id="jmenoLog" required="required" placeholder="Login..." />
+        <label for="hesloLog">Heslo:</label>
+        <input type="password" name="password" id="hesloLog" required="required" placeholder="Heslo..." />
+    </div>
+    <div class="formButtons"><input type="submit" value="Příhlásit" /><input type="button" id="registerBtn" value="Registrace" /></div>
+</form>
+<div id="registerFormCover">
+    <form method="POST" action="/login/register" id="registerForm" class="formCover animate">
+        <span id="closeBtnReg" title="Zavřít okno">&times;</span>
+        <div class="zprava-danger"><%- regNotice %></div>
+        <h2>Registrace uživatele</h2>
+        <label for="jmenoReg">Uživatelské jméno:</label>
+        <input type="text" name="name" id="jmenoReg" required="required" placeholder="Uživatelské jméno..." value="<%= regname %>" />
+        <label for="hesloReg">Heslo:</label>
+        <input type="password" name="password" id="hesloReg" required="required" placeholder="Vaše heslo..." />
+        <label for="hesloReg2">Kontrola hesla:</label>
+        <input type="password" name="password2" id="hesloReg2" required="required" placeholder="Znovu Vaše heslo..." />
+        <label for="antispam">Antispam:</label>
+        <input type="text" name="antispam" id="antispam" required="required" placeholder="Zde zadejte aktuální rok..." />
+        <div class="formButtons"><input type="submit" value="Registrovat" /><input type="button" id="cancelBtn" value="Zrušit" /></div>
+    </form>
+</div>
+<script src="/js/login.js"></script>

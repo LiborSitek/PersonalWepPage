@@ -1,0 +1,33 @@
+{
+  "name": "personalwebpage",
+  "version": "1.0.0",
+  "description": "My personal web page using Node.js and MongoDB",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "mongodb",
+    "webpage"
+  ],
+  "author": "Libor Sitek",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.15.6",
+    "express-validator": "^4.3.0",
+    "mongoose": "^5.0.0-rc0",
+    "npa": "^0.1.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "remove-accents": "^0.4.2",
+    "sendmail": "^1.2.0",
+    "serve-favicon": "^2.4.5"
+  }
+}

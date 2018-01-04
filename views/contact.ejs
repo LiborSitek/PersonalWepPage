@@ -1,0 +1,15 @@
+<h1>Kontaktní formulář</h1>
+<p class="noIndent">Pokud mi chcete něco zdělit, můžete použít tento kontaktní formulář:</p>
+<div class="formCover">
+    <form method="POST" action="/contact">
+        <label for="jmeno">Vaše jméno:</label>
+        <input type="text" name="name" id="jmeno" required="required" placeholder="Vaše jméno..." value="<%= name %>" />
+        <label for="email">Váš email:</label>
+        <input type="email" name="email" id="email" required="required" value="<%= email %>" />
+        <label for="antispam">Antispam:</label>
+        <input type="text" name="antispam" id="antispam" required="required" placeholder="Zde zadejte aktuální den v týdnu..." />
+        <label for="zprava">Váše zpráva:</label>
+        <textarea name="message" id="zprava" placeholder="Text zprávy..."><%= message %></textarea>
+        <div class="center"><input type="submit" value="Odeslat" /></div>
+    </form>
+</div>

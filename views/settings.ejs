@@ -1,0 +1,43 @@
+<h1>Vítejte <%= user.username %></h1>
+<form method="POST" action="/settings">
+    Nastavení typu písma:
+    <select name="font">
+        <option value="Verdana">Verdana (Původní)</option>
+        <option value="Lucida Console">Lucida Console</option>
+        <option value="Book Antiqua">Book Antiqua</option>
+        <option value="Impact">Impact</option>
+    </select>
+    Barva pozadí hlavičky a patičky:
+    <select name="background">
+        <option value="#333">Tmavě šedá (Původní)</option>
+        <option value="brown">Hnědá</option>
+        <option value="darkslateblue">Modrá</option>
+        <option value="teal">Modrozelená</option>
+        <option value="crimson">Červená</option>
+        <option value="darkorchid">Fialová</option>
+    </select>
+    Tapeta hlavního obsahu:
+    <select name="image2">
+        <option value="pozadi2.png">Světlé dřevo (Původní)</option>
+        <option value="pozadi6.png">Vlnky</option>
+        <option value="pozadi7.jpg">Květy</option>
+        <option value="pozadi8.jpg">Koberec</option>
+    </select>
+    Vedlejší tapeta (pro monitory a tablety):
+    <select name="image1">
+        <option value="pozadi1.jpg">Palubky (Původní)</option>
+        <option value="pozadi3.jpg">Koš vlákna</option>
+        <option value="pozadi4.jpg">Cihly</option>
+        <option value="pozadi5.jpg">Mozaika</option>
+    </select>
+    <div class="formButtons">
+        <input type="submit" value="Uložit" />
+        <input type="button" id="odhlasBtn" value="Odhlásit" onclick="location.replace('/login/logout');" />
+    </div>
+</form>
+<script>
+    $("[value='<%= user.font %>']").attr("selected", "selected");
+    $("[value='<%= user.backgroound %>']").attr("selected", "selected");
+    $("[value='<%= user.image1 %>']").attr("selected", "selected");
+    $("[value='<%= user.image2 %>']").attr("selected", "selected");
+</script>
